@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geek Form</title>
+  </head>
+  <body>
+    <form action="processa_form.php" method="post">
+      <fieldset>
+        <legend>Geek Identificação</legend>
+
+        <label for="nome">Nome:</label>
+        <input type="text" minlength="3" id="nome" required />
+
+        <label for="data_aniversario">Aniversário</label>
+        <input
+          type="text"
+          id="data_aniversario"
+          placeholder="00/00/0000"
+          pattern="[0-9] {2} / [0-9] {2} / [0-9] {4}"
+        />
+
+        <label for="e-mail">E-mail:</label>
+        <input type="text" id="emial" placeholder="emial@email.com" required />
+
+        <label for="tel">Telefone:</label>
+        <input
+          type="tel"
+          id="tel"
+          placeholder="00-00000-0000"
+          pattern="[0-9] {2} - [0-9] {5} - [0-9] {4}"
+          required
+        />
+      </fieldset>
+
+      <fieldset>
+        <legend>Meu Top 5</legend>
+
+        <label for="filmes">Filmes</label>
+        <textarea id="text_filme" rows="5" cols="20"></textarea>
+
+        <label for="jogos">Jogos</label>
+        <textarea id="jogos" rows="5" cols="20"></textarea>
+
+        <label for="bandas">Bandas</label>
+        <textarea id="bandas" rows="5" cols="20"></textarea>
+
+        <label for="livros_hq">Livros / HQ</label>
+        <textarea id="text_livros_hq" rows="5" cols="20"></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>De você conhecer um pouco mais sobre queremos!</legend>
+        <textarea
+          id="sobre_voce"
+          cols="30"
+          rows="10"
+          placeholder="Escrever aqui você deve!"
+        ></textarea>
+      </fieldset>
+
+      <button type="submit" id="bt_enviar">ENVIAR</button>
+      <button type="reset" id="bt_resetar">RESETAR</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário</title>
+  </head>
+  <body>
+    <form action="/processa-dados-do-form" method="post">
+      <fieldset>
+        <legend>DADOS GERAIS</legend>
+
+        <label for="nome">Nome</label>
+        <input type="text" minlength="3" id="nome" required />
+        <!--REQUIRED = OBRIGA O PREENCHIMENTO DA INFORMAÇÃO-->
+
+        <label for="data_nascimento">Data de Nascimento</label>
+        <input type="text" id="data_nascimento" />
+
+        <label for="cpf">CPF:</label>
+        <input
+          type="text"
+          minlength="11"
+          maxlength="11"
+          id="cpf"
+          placeholder="Apenas Números"
+          required
+        />
+        <!--MAXLENGTH E MINLENGTH = TAMANHO PERMITIDO DE CARACTERES-->
+
+        <label for="email">E-mail:</label>
+        <input type="text" id="email" placeholder="email@email.com" required />
+      </fieldset>
+
+      <fieldset>
+        <legend>Endereço</legend>
+
+        <label for="tipo_endereco">Tipo:</label>
+        <select id="tipo_endereco">
+          <option value="">Selecione</option>
+          <option value="rua">Rua</option>
+          <option value="avenida">Avenida</option>
+          <option value="estrada">Estrada</option>
+          <option value="rodovia">Rodovia</option>
+          <option value="outro">Outro</option>
+        </select>
+
+        <label for="logradouro_endereço">Logradouro:</label>
+        <input type="text" id="logradouro_endereco" />
+
+        <label for="numero_endereco">Nº:</label>
+        <input type="text" id="numero_endereco" />
+
+        <label for="complemento_endereco">Complemento:</label>
+        <input type="complemento_endereco" id="complemento_endereco" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Fale Conosco</legend>
+
+        <label for="msg">Mensagem:</label>
+        <textarea id="msg"></textarea>
+
+        <label for="satisfeito">Satisfeito</label>
+        <input type="radio" name="tipo_msg" value="Satisfeito" />
+        <!--INPUT RADIO PERMITE APENAS 1 OPÇÃO-->
+        <label for="insatisfeito">Insatisfeito</label>
+        <input type="radio" name="tipo_msg" value="Insatisfeito" />
+        <label for="moderado">Moderado</label>
+        <input type="radio" name="tipo_msg" value="Moderado" />
+      </fieldset>
+
+      <fieldset>
+        <button type="submit">Enviar Mensagem</button>
+        <button type="reset">Limpar o Formulário</button>
+      </fieldset>
+    </form>
+  </body>
+</html>
